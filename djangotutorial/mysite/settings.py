@@ -31,13 +31,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.admin', # the admin site
+    'django.contrib.auth',  # authentication framework
+    'django.contrib.contenttypes', #content type framework
+    'django.contrib.sessions', #session framework
+    'django.contrib.messages', #`messaging framework    
+    'django.contrib.staticfiles', #manages static files
+    "polls.apps.PollsConfig", # add a reference to its polls app configuration class 
 ]
+# run "python manage.py migrate" to create the necessary database tables for these apps
+# run "python manage.py makemigrations polls" to create migrations for the polls app
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -104,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'GMT+08:00'
 
 USE_I18N = True
 

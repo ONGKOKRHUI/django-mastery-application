@@ -1,0 +1,3 @@
+https://docs.djangoproject.com/en/6.0/intro/tutorial02/
+
+Introducing the Django Admin¶

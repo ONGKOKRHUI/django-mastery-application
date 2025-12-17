@@ -1,3 +1,10 @@
-https://docs.djangoproject.com/en/6.0/intro/tutorial02/
+Tutorial 02 - Learning About admin site and API use
 
+https://docs.djangoproject.com/en/6.0/intro/tutorial02/
 Introducing the Django Admin¶
+we can create an admin by running python manage.py createsuperuser
+then register an admin
+when we run server, we can log in and have admin view
+to allow the site to show a page, add it to admin.py file
+
+Tutorial 03 - 

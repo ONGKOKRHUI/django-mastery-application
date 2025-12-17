@@ -8,3 +8,5 @@ when we run server, we can log in and have admin view
 to allow the site to show a page, add it to admin.py file
 
 Tutorial 03 - 
+https://docs.djangoproject.com/en/6.0/intro/tutorial03/
+A shortcut: render()¶

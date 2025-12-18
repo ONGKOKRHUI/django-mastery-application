@@ -9,4 +9,6 @@ to allow the site to show a page, add it to admin.py file
 
 Tutorial 03 - 
 https://docs.djangoproject.com/en/6.0/intro/tutorial03/
-A shortcut: render()¶
+A shortcut: render()
+
+http://localhost:8000/polls/

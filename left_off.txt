@@ -12,3 +12,7 @@ https://docs.djangoproject.com/en/6.0/intro/tutorial03/
 A shortcut: render()
 
 http://localhost:8000/polls/
+
+Tutorial 04 - 
+https://docs.djangoproject.com/en/6.0/intro/tutorial04/
+implementing the real vote() function in polls/views.py

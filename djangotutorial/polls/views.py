@@ -27,6 +27,8 @@ def results(request, question_id):
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     try:
+        #returns the ID of selected chouce in strings
+        #we can also use request.GET but we want to ensure that daya is only altered by POST call here
         selected_choice = question.choice_set.get(pk=request.POST["choice"])
     except (KeyError, Choice.DoesNotExist):
         # Redisplay the question voting form.
@@ -39,13 +41,21 @@ def vote(request, question_id):
             },
         )
     else:
+        #F("votes") + 1 instructs the database to increase the vote count by 1.
         selected_choice.votes = F("votes") + 1
         selected_choice.save()
         # Always return an HttpResponseRedirect after successfully dealing
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
+        """
+         reverse() function helps avoid having to hardcode a URL in the view 
+         function. It is given the name of the view that we want to pass 
+         control to and the variable portion of the URL pattern that points to that view
+        returns a string like: "/polls/3/results/"
+        """
         return HttpResponseRedirect(reverse("polls:results", args=(question.id,)))
     # (dummy) return HttpResponse("You're voting on question %s." % question_id)
+
 
 
 from .models import Question
